@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'calibri';
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #b3d8a0, #bfdcb0, #cbdfc0, #d6e3d0, #e2e6e0);
+}
+#calculadora {
+    border: 2px solid black;
+    padding:8px;
+    margin: auto;
+    border-radius: 5px; 
+    position: relative;
+}
+#botonesConteiner{
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-areas:
+        "ac dividir multiplicar restar"
+        "siete ocho nueve sumar"
+        "cuatro cinco seis sumar"
+        "uno dos tres igual"
+        "c cero punto igual";
+    gap: 5px;
+    width: 400px;
+    aspect-ratio: 1;
+    margin-top: 6px;
+}
+#pantalla{
+    border: 1px solid black;
+    text-align: end;
+    font-size: 3rem;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#indicadorOperacion {
+    position: absolute;
+    font-size: x-large;
+    top: 8px;
+    left: 30px;
+}
+button {
+    font-size: larger;
+    border-radius: 2px;
+    border-width: 1px;
+    cursor: pointer;
+    transition: 30ms;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 2px rgb(190, 190, 190);
+}
+button:hover{
+    background-color:rgb(245, 245, 245);
+}
+button:active {
+    box-shadow: 0 1px 1px rgb(140, 140, 140);
+    transform: translateY(1px);
+}
+#cero {
+    grid-area: cero;
+}
+#uno {
+    grid-area: uno;
+}
+#dos {
+    grid-area: dos;
+}
+#tres {
+    grid-area: tres;
+}
+#cuatro {
+    grid-area: cuatro;
+}
+#cinco {
+    grid-area: cinco;
+}
+#seis {
+    grid-area: seis;
+}
+#siete {
+    grid-area: siete;
+}
+#ocho {
+    grid-area: ocho;
+}
+#nueve {
+    grid-area: nueve;
+}
+#sumar {
+    grid-area: sumar;
+}
+#restar {
+    grid-area: restar;
+}
+#dividir {
+    grid-area: dividir;
+}
+#multiplicar {
+    grid-area: multiplicar;
+}
+#igual {
+    grid-area: igual;
+}
